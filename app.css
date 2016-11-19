@@ -9,11 +9,18 @@
   border :1px solid red;
 }
 
+#start
+{
+  position:absolute;
+  left:43%;
+  top:60%;
+}
+
 #goself
 {
   position:absolute;
-  top:65%;
-  left:35%;
+  top:70%;
+  left:40%;
   margin-top:5px;
 }
 
