@@ -3,9 +3,9 @@
   position: absolute;
   left:38%;
   top:20%;
-  margin-top:10px;/*邊界距離*/
-  margin-left:10px;
-  margin-right:10px;
+  margin-top:1px;/*邊界距離*/
+  margin-left:1px;
+  margin-right:1px;
   border :1px solid red;
 }
 
