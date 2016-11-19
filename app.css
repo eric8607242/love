@@ -9,6 +9,12 @@
   border :1px solid red;
 }
 
+#goself
+{
+  position:absolute;
+  left:40%;
+  margin-top:5px;
+}
 
 @-webkit-keyframes pulse {
   from {
