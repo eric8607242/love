@@ -8,3 +8,25 @@
   margin-right:50px;
   border :1px solid red;
 }
+
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1.0);
+    opacity: 1,0;
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    opacity: 1.0;
+  }
+    to { 
+    -webkit-transform: scale(1.0);
+    opacity: 1.0;
+  }
+}
+
+#love:hover { 
+  -webkit-animation-name: pulse;  
+  -webkit-animation-duration: 0.5s; 
+  -webkit-animation-iteration-count: 10;
+  }
