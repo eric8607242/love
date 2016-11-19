@@ -1,11 +1,7 @@
 #love
 {
   position: absolute;
-  left:38%;
-  top:20%;
-  margin-top:1px;/*邊界距離*/
-  margin-left:1px;
-  margin-right:1px;
+  margin:auto;
   border :1px solid red;
 }
 
