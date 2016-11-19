@@ -1,7 +1,11 @@
 #love
 {
   position: absolute;
-  margin:auto;
+  left:40%;
+  top:30%;
+  margin-left:1px;
+  margin-right:1px;
+  margin-top:1px;
   border :1px solid red;
 }
 
