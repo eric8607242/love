@@ -8,10 +8,10 @@
   margin-top:1px;*/
 }
 
-#start
+.photo
 {
-  width:120px;
-  height:70px;;
+  width:50%;
+  height:auto;
   position:absolute;
   left:43%;
   top:60%;
