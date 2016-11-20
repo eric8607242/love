@@ -6,7 +6,6 @@
   /*margin-left:1px;
   margin-right:1px;
   margin-top:1px;*/
-  border :1px solid red;
 }
 
 #start
@@ -18,9 +17,11 @@
 
 #goself
 {
+  width = 200;
+  height = 80;
   position:absolute;
   top:70%;
-  left:40%;
+  left:42%;
   margin-top:5px;
 }
 
