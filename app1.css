@@ -1,29 +1,33 @@
 .man1
 {
+  width:50%;
+  height:auto;
   position:absolute;
   left:45%;
-  top:13%;
 }
 
 .man2
 {
+  width:50%;
+  height:auto;
   position:absolute;
   left:45%;
-  top:33%;
 }
 
 .man3
 {
+  width:50%;
+  height:auto;
   position:absolute;
   left:45%;
-  top:53%;
 }
 
 .man4
 {
+  width:50%;
+  height:auto;
   position:absolute;
   left:45%;
-  top:73%;
 }
 
 
