@@ -7,7 +7,7 @@ function move() {
       clearInterval(pgbar);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      elem.width = width + '%'; 
       document.getElementById("label").innerHTML = width * 1  + '%';
     }
   }
