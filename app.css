@@ -10,10 +10,10 @@
 
 .start
 {
-  width:12.5%;
+  width:8%;
   height:auto;
   position:absolute;
-  left:43%;
+  left:50%;
   top:60%;
   border: 1px solid red;
 }
