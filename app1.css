@@ -9,7 +9,7 @@
   position:absolute;
   left:35%;
   top:13%;
-  background: rgba(224,224,224,0.5);
+  background: rgba(125,125,255,0.5);
 
 }
 #man1self
@@ -17,7 +17,8 @@
   position:absolute;
   left:45%;
   top:13%;
-  background: rgba(224,224,224,0.5);
+  background: rgba(125,125,255,0.5);
+
 
 }
 
@@ -26,7 +27,8 @@
   position:absolute;
   left:35%;
   top:63%;
-  background: rgba(224,224,224,0.5);
+  background: rgba(125,125,255,0.5);
+
 
 }
 #man2self
@@ -34,7 +36,8 @@
   position:absolute;
   left:45%;
   top:63%;
-  background: rgba(224,224,224,0.5);
+  background: rgba(125,125,255,0.5);
+
 
 }
 
@@ -43,7 +46,8 @@
   position:absolute;
   left:35%;
   top:113%;
-  background: rgba(224,224,224,0.5);
+  background: rgba(125,125,255,0.5);
+
 
 }
 #man3self
@@ -51,7 +55,8 @@
   position:absolute;
   left:45%;
   top:113%;
-  background: rgba(224,224,224,0.5);
+  background: rgba(125,125,255,0.5);
+
 
 }
 
@@ -60,7 +65,8 @@
   position:absolute;
   left:33%;
   top:163%;
-  background: rgba(224,224,224,0.5);
+  background: rgba(125,125,255,0.5);
+
 
 }
 #man4self
@@ -68,7 +74,8 @@
   position:absolute;
   left:45%;
   top:163%;
-  background: rgba(224,224,224,0.5);
+  background: rgba(125,125,255,0.5);
+
 
 }
 
