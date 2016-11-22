@@ -1,12 +1,25 @@
+#you
+{
+  position:absolute;
+  top:20%;
+  left:30%;
+}
 .lover
 {
   position:absolute;
-  top:13%;
+  top:33%;
   left:20%;
+}
+
+#he
+{
+  position:absolute;
+  top:20%;
+  left:70%;
 }
 .beloved
 {
   position:absolute;
-  top:13%;
+  top:33%;
   left:60%;
 }
