@@ -1,6 +1,6 @@
 function move() {
   var elem = document.getElementById("bar"); 
-  var width = 1;
+  var width = 0;
   var pgbar = setInterval(run, 10);
   function run() {
     if (width >= 100) {
