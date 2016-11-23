@@ -5,6 +5,68 @@
 <link rel=stylesheet type="text/css" href="app.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="app.js"></script>
+
+<script>
+function statusChangeCallback(response) {
+  console.log('statusChangeCallback');
+  console.log(response);
+  if (response.status === 'connected') {
+    testAPI();
+  } 
+  else if (response.status === 'not_authorized') {
+    document.getElementById('status').innerHTML = 'Please log ' +
+      'into this app.';
+  } else {
+    document.getElementById('status').innerHTML = 'Please log ' +
+      'into Facebook.';
+  }
+}
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+      });
+}
+window.fbAsyncInit = function() {
+  FB.init({
+  appId      : 'your-app-id',
+  xfbml      : true,
+  version    : 'v2.8'
+  });
+};
+
+FB.getLoginStatus(function(response) {
+    if (response.status === 'connected') {
+    console.log('Logged in.');
+    }
+    else {
+    FB.login();
+    }
+    });
+
+(function(d, s, id){
+ var js, fjs = d.getElementsByTagName(s)[0];
+ if (d.getElementById(id)) {return;}
+ js = d.createElement(s); js.id = id;
+ js.src = "//connect.facebook.net/en_US/sdk.js";
+ fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+
+function testAPI() {
+  console.log('Welcome!  Fetching your information.... ');
+  FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+      'Thanks for logging in, ' + response.name + '!';
+  });
+}
+
+</script>
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+
 <body bgcolor="white">
 <p>
 <div id = "love"><img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/15078877_1068281499937615_316341121904240017_n.jpg?oh=6c521313743c6045048342c3acddabbe&oe=58C5F92F"
@@ -19,9 +81,9 @@ About us
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
 
 <div id="progress">
-  <div id="bar">
-      <div id="label">0%</div>
-  </div>
+<div id="bar">
+<div id="label">0%</div>
+</div>
 </div>
 <br>
 <button onclick="move()">Click Me</button>
