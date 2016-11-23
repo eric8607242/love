@@ -25,6 +25,7 @@ console.log("你們沒機會");
 });
 }
 }
+
 function move() {
   var elem = document.getElementById("bar");
   var width = 0;
