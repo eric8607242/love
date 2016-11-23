@@ -11,10 +11,13 @@ function saveData(){
   }
   else
   {
+    var name =  $('#name').val(); 
+    var name1 = $('#name1').val();
+
     $.ajax({
       url:"name.json";
       type:"POST";
-      data:{'#name':'#name1'},
+      data:{name:name1},
       success:function(data)
       {
         console.log("你們沒機會");
