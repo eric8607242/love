@@ -12,11 +12,10 @@ if ($conn->connect_error)
     {
       die("Connection failed: " . $conn->connect_error);
       echo "111";
-      print("hi");
     }
 else{
     // prepare and bind
-    $conn -> query("INSERT INTO MyGuests(firstname,lastname)VALUE('".$_POST['name']."','".$_POST['name1']."')")
+    $conn -> query("INSERT INTO MyGuests(firstname,lastname)VALUE('".$_POST['name']."','".$_POST['name1']."')");
     $conn->close();
     }
     ?>
