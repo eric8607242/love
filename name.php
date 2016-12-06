@@ -10,7 +10,7 @@ $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-    }
+  
     print("hi");
     // prepare and bind
     $stmt = $conn->prepare("MyGuests (firstname, lastname, email) VALUES (?, ?, ?)");
@@ -36,4 +36,9 @@ if ($conn->connect_error) {
 
     $stmt->close();
     $conn->close();
+    }
+    else
+    {
+      echo "fail";
+    }
     ?>
