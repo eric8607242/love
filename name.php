@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <?php
 $dbhost = 'localhost';
 $dbuser = 'wp2016_groupE';
@@ -21,3 +21,4 @@ else{
     $conn->close();
     }
     ?>
+</html>
