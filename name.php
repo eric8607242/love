@@ -8,26 +8,15 @@ $dbname = 'wp2016_groupE';
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  
-    print("hi");
+if ($conn->connect_error) 
+    {
+      die("Connection failed: " . $conn->connect_error);
+      echo "111";
+      print("hi");
+    }
+else{
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO MyGuests(firstname, lastname, email) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $firstname, $lastname, $email);
-
-    $sql = "INSERT INTO MyGuests(firstname,lastname,email)VALUE('John','Doe','john@example.com')";   
-
-    if($conn -> query($sql) == TRUE)
-    {
-      echo "GOGO";
-    }
-
-    $stmt->close();
+    $conn -> query("INSERT INTO MyGuests(firstname,lastname)VALUE('".$_POST['name']."','".$_POST['name1']."')")
     $conn->close();
-    }
-    else
-    {
-      echo "fail";
     }
     ?>

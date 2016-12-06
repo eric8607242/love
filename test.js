@@ -1,10 +1,10 @@
-$(document).ready(function()
-{
-    $('form').submit(function()
+/*$(document).ready(function()
     {
-      saveData();
-    }
-}));
+    $('form').submit(function()
+        {
+        saveData();
+        }
+        }));
 
 function saveData(){
   if($('#name').va()==''||$('name1').va()=='')
@@ -17,17 +17,28 @@ function saveData(){
     var nam= $('#name1').val();
 
     $.ajax({
-      url:"name.php";
-      type:"POST";
-      data:{na:nam},
-      error:function(){
-        alert("wrong");
-      },
-      success:function(data)
-      {
-        console.log("你們沒機會");
-      }
-    });
-  }
+url:"./name.php";
+type:"POST";
+data:{"firstname":na},
+error:function(){
+alert("wrong");
+},
+success:function(data)
+{
+console.log("你們沒機會");
 }
-    
+});
+}
+}
+*/
+$(document).ready(function () {
+    alert('HI');
+    $('#send').click(function () {
+        if ($('#name').is(':empty')){
+        $('.ItemName').addClass('has-error');
+        }
+        else {
+        $('.ItemName').removeClass('has-error');
+        }
+        });
+    });
