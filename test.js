@@ -5,7 +5,7 @@ $(document).ready(function()
       saveData();
     }
 }));
-)
+
 function saveData(){
   if($('#name').va()==''||$('name1').va()=='')
   {
