@@ -17,7 +17,7 @@ if ($conn->connect_error)
     }
 else{
     // prepare and bind
-    $conn -> query("INSERT INTO MyGuests(firstname,lastname)VALUE('".$_POST['name']."','".$_POST['name1']."')");
+    $conn -> query("INSERT INTO MyGuests(firstname,lastname)VALUE(name,name)");
     $conn->close();
     }
     ?>
