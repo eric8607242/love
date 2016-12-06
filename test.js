@@ -20,6 +20,9 @@ function saveData(){
       url:"name.php";
       type:"POST";
       data:{na:nam},
+      error:function(){
+        alert("wrong");
+      },
       success:function(data)
       {
         console.log("你們沒機會");
