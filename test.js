@@ -1,12 +1,14 @@
-$(document).ready(function(){
-    $('form').submit(function(){
-        saveData();
-        }
-        });
-
-    function saveData(){
-    if($('#name').va()==''||$('name1').va()=='')
+$(document).ready(function()
+{
+    $('form').submit(function()
     {
+      saveData();
+    }
+}));
+
+function saveData(){
+  if($('#name').va()==''||$('name1').va()=='')
+  {
     alert('fuck you\n');
   }
   else
