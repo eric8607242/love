@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 $dbhost = 'localhost';
 $dbuser = 'wp2016_groupE';
