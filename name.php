@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!DOCTYPE html>
-<html>
 <body>
 
 <link rel=stylesheet type="text/css" href="app.css">
@@ -28,7 +26,6 @@ if ($conn->connect_error)
   echo "111";
 }
 else{
-  // prepare and bind
   $conn -> query("INSERT INTO MyGuests(firstname,lastname)VALUE(name,name)");
   $conn->close();
 }
