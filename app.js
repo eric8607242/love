@@ -5,15 +5,13 @@ function move() {
   function run() {
     if (width >= 100) {
       clearInterval(pgbar);
+      location="temp.html"
     } else {
       width++;
       elem.style.width = width + '%';
       document.getElementById("label").innerHTML = width * 1  + '%';
     }
-    if (width == 100)
-    {
-      window.open('temp.html') ;
-    }
+    
   }
 }
 
