@@ -13,10 +13,10 @@ if ($conn->connect_error) {
   
     print("hi");
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO MyGuests(firstname, lastname, email) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("MyGuests(firstname, lastname, email) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $firstname, $lastname, $email);
 
-    $sql = "INSERT INTO MyGuests(firstname,lastname,email)VALUE('John','Doe','john@example.com')";   
+    $sql = "MyGuests(firstname,lastname,email)VALUE('John','Doe','john@example.com')";   
 
     if($conn -> query($sql) == TRUE)
     {

@@ -17,9 +17,9 @@ function saveData(){
     var nam= $('#name1').val();
 
     $.ajax({
-      url:"name.php";
+      url:"./name.php";
       type:"POST";
-      data:{na:nam},
+      data:{"firstname":na},
       error:function(){
         alert("wrong");
       },
