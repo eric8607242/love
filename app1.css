@@ -37,7 +37,7 @@
 .man2
 {
   position:absolute;
-  left:90%;
+  left:30%;
   top:63%;
 
 
@@ -45,9 +45,9 @@
 #man2self
 {
   position:absolute;
-  left:70%;
+  left:43%;
   top:63%;
-  padding:21px;
+  padding:0px;
   background-color:#ff7575;
   -webkit-filter: opacity(90%); /* Safari */
   filter: opacity(90%);
@@ -67,15 +67,15 @@
 .man3
 {
   position:absolute;
-  left:0%;
+  left:30%;
   top:113%;
 }
 #man3self
 {
   position:absolute;
-  left:13%;
+  left:43%;
   top:113%;
-  padding:21px;
+  padding:0px;
   background-color:#ff7575;
   -webkit-filter: opacity(90%); /* Safari */
   filter: opacity(90%);
@@ -94,15 +94,15 @@
 .man4
 {
   position:absolute;
-  left:90%;
+  left:30%;
   top:163%;
 }
 #man4self
 {
   position:absolute;
-  left:70%;
+  left:43%;
   top:163%;
-  padding:21px;
+  padding:0px;
   background-color:#ff7575;
   -webkit-filter: opacity(90%); /* Safari */
   filter: opacity(90%);

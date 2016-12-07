@@ -14,9 +14,9 @@
 
 
 <font face="cursive" size="4" color="black">
+<form method="post" role="form" class="fo">
 <div class="lover">
-<form>
-你的名字:<input type = "text" id="name" placeholder="ex.牛郎">
+你的名字:<input type = "text" id="name" name = "name" placeholder="ex.牛郎">
 <br><br><br>
 你的生日:<input type = "text" id="bir" placeholder="ex.0000/00/00">
 <br><br><br>
@@ -25,13 +25,13 @@
 </div>
 
 <div class="beloved">
-他的名字:<input type = "text" id="name1" placeholder="ex.織女">
+他的名字:<input type = "text" id="name1" name = "name1" placeholder="ex.織女">
 <br><br><br>
 他的生日:<input type = "text" id="bir1" placeholder="ex.0000/00/00">
 <br><br><br>
 </div>
 <div class = "gogo">
-<input id="sub1" type="submit" value="開始測驗!!!">
+<button type="submit" class="btn_test" id="send" onclick="move()"><a  id="goto" style="text-decoration:none;">開始測驗!!</a></button><br><br>
 </div>
 
 </form>
