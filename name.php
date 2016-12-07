@@ -11,6 +11,8 @@
 </body>
 
 <?php
+session_start();
+
 $dbhost = 'localhost';
 $dbuser = 'wp2016_groupE';
 $dbpass = 'lovedivine';
