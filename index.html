@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+<style>
+@keyframes mysnow {
+  0% {  bottom: 100%; opacity: 0; }
+  25%{  bottom:50%;   opacity:1; }
+  50% { bottom:30%;   opacity:1; }
+  100% {bottom: 0%;   opacity:1; }
+}
+@keyframes wave {
+  0%{left:0px; opacity: 0;}
+  25%{left:200px; opacity:1;transform:rotate(360deg);}
+  50%{left:-200px; opacity:1;transform:rotate(0deg);}
+  75%{left:100px;  opacity:1;transform:rotate(270deg);}
+  100%{left:-100px; opacity:1;transform:rotate(0deg);}
+
+}
+.container { position: fixed; }
+.pic { position: absolute; opacity: 0;animation:  mysnow 10s,wave 20s;height: 40px; }
+</style> 
+</head>
+<body> 
 <meta charset= "utf-8">
 <link rel=stylesheet type="text/css" href="app.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -113,18 +133,18 @@ alert(access);
 <!--
 <nav>
 
- <li class="board">
- <a href="#" class="boardtitle">關於遊戲</a>
- <div class="slidedown">
- <a href="think.html" class="slidedownindex">概念發想</a>
- <a href="howtoplay.html" class="slidedownindex">遊戲玩法</a>
- </div>
- </li>
+<li class="board">
+<a href="#" class="boardtitle">關於遊戲</a>
+<div class="slidedown">
+<a href="think.html" class="slidedownindex">概念發想</a>
+<a href="howtoplay.html" class="slidedownindex">遊戲玩法</a>
+</div>
+</li>
 
- <li class="board">
- <a href="self.html" class="boardtitle">關於開發者</a>
- </div>
- </li>
+<li class="board">
+<a href="self.html" class="boardtitle">關於開發者</a>
+</div>
+</li>
 
 </nav>
 -->
@@ -139,8 +159,39 @@ alt=love align="center" border="0">
 About us
 </b></a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
-
+<div style="position:relative;width:267px;height:25px;overflow:hidden;">
+<div style="position:absolute;top:-276px;left:-5px"><iframe width="300" height="300" src="https://www.youtube.com/embed/p-4pLjpcVFY?rel=0"></iframe></div></div>
 
 </p>
+<div id="snowFlow" > 
+</div>
 </body>
+<script>
+window.onload=function(){
+  // snowFlow();
+  function snowFlow(left,height,src){
+    var container=document.createElement('div');
+    var pic=document.createElement('img');
+    pic.src='https://c2.staticflickr.com/6/5532/31477361605_7f7d37cf2b_o.png';
+    var snowFlow=document.getElementById('snowFlow');
+    pic.className='pic';
+    container.className='container';  
+    snowFlow.appendChild(container);
+    container.appendChild(pic);
+    container.style.left=left+'px';
+    container.style.height=height+'px';
+    setTimeout(function(){
+        snowFlow.removeChild(container);
+        },5000);
+  }
+  setInterval(function(){
+      var left=Math.random()*window.innerWidth;
+      var height=Math.random()*window.innerHeight;
+      var src = 'snow.png';
+      snowFlow(left,height,src);
+      },500)
+
+}
+
+</script>
 </html>

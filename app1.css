@@ -7,76 +7,115 @@
 .man1
 {
   position:absolute;
-  left:35%;
+  left:30%;
   top:13%;
-  background: rgba(125,125,255,0.5);
-
 }
 #man1self
 {
   position:absolute;
-  left:45%;
+  padding:0px;
+  left:43%;
   top:13%;
-  background: rgba(125,125,255,0.5);
+  background-color:#ff7575;
+  -webkit-filter: opacity(90%); /* Safari */
+  filter: opacity(90%);
 
 
 }
+#info1{
+  -webkit-filter: opacity(0%); /* Safari */
+  filter: opacity(0%);
+}
+
+
+#info1:hover{
+  -webkit-filter: opacity(90%); /* Safari */
+  filter: opacity(90%);
+}
+
 
 .man2
 {
   position:absolute;
-  left:35%;
+  left:30%;
   top:63%;
-  background: rgba(125,125,255,0.5);
 
 
 }
 #man2self
 {
   position:absolute;
-  left:45%;
+  left:43%;
   top:63%;
-  background: rgba(125,125,255,0.5);
+  padding:0px;
+  background-color:#ff7575;
+  -webkit-filter: opacity(90%); /* Safari */
+  filter: opacity(90%);
 
 
 }
+#info2{
+  -webkit-filter: opacity(0%); /* Safari */
+  filter: opacity(0%);
+}
+#info2:hover{
+  -webkit-filter: opacity(90%); /* Safari */
+  filter: opacity(90%);
+}
+
 
 .man3
 {
   position:absolute;
-  left:35%;
+  left:30%;
   top:113%;
-  background: rgba(125,125,255,0.5);
-
-
 }
 #man3self
 {
   position:absolute;
-  left:45%;
+  left:43%;
   top:113%;
-  background: rgba(125,125,255,0.5);
-
+  padding:0px;
+  background-color:#ff7575;
+  -webkit-filter: opacity(90%); /* Safari */
+  filter: opacity(90%);
 
 }
+#info3{
+  -webkit-filter: opacity(0%); /* Safari */
+  filter: opacity(0%);
+}
+#info3:hover{
+  -webkit-filter: opacity(90%); /* Safari */
+  filter: opacity(90%);
+  }
+
 
 .man4
 {
   position:absolute;
-  left:33%;
+  left:30%;
   top:163%;
-  background: rgba(125,125,255,0.5);
-
-
 }
 #man4self
 {
   position:absolute;
-  left:45%;
+  left:43%;
   top:163%;
-  background: rgba(125,125,255,0.5);
+  padding:0px;
+  background-color:#ff7575;
+  -webkit-filter: opacity(90%); /* Safari */
+  filter: opacity(90%);
 
+}
+#info4{
+  -webkit-filter: opacity(0%); /* Safari */
+  filter: opacity(0%);
+}
 
+#info4:hover{
+  -webkit-filter: opacity(90%); /* Safari */
+  filter: opacity(90%);
 }
 
 

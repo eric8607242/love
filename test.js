@@ -17,6 +17,20 @@ function saveData(){
     var nam= $('#name1').val();
 
     $.ajax({
+<<<<<<< HEAD
+      url:"./name.php";
+      type:"POST";
+      data:{"firstname":na},
+      error:function(){
+        alert("wrong");
+      },
+      success:function(data)
+      {
+        console.log("你們沒機會");
+      }
+    });
+  }
+=======
 url:"./name.php";
 type:"POST";
 data:{"firstname":na},
@@ -28,6 +42,7 @@ success:function(data)
 console.log("你們沒機會");
 }
 });
+>>>>>>> fad33a4f9b1ad45f27c2d6e7aba8851d139c7007
 }
 }
 */

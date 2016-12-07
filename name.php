@@ -22,6 +22,31 @@ $dbname = 'wp2016_groupE';
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
 // Check connection
+<<<<<<< HEAD
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  
+    print("hi");
+    // prepare and bind
+    $stmt = $conn->prepare("MyGuests(firstname, lastname, email) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $firstname, $lastname, $email);
+
+    $sql = "MyGuests(firstname,lastname,email)VALUE('John','Doe','john@example.com')";   
+
+    if($conn -> query($sql) == TRUE)
+    {
+      echo "GOGO";
+    }
+
+    $stmt->close();
+    $conn->close();
+    }
+    else
+    {
+      echo "fail";
+    }
+    ?>
+=======
 if ($conn->connect_error) 
 {
   die("Connection failed: " . $conn->connect_error);
@@ -33,3 +58,4 @@ else{
 }
 ?>
 </html>
+>>>>>>> fad33a4f9b1ad45f27c2d6e7aba8851d139c7007
