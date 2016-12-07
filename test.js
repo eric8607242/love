@@ -31,7 +31,7 @@ console.log("你們沒機會");
 }
 }
 */
-$(document).ready(function () {
+/*$(document).ready(function () {
     alert('HI');
     $('#send').click(function () {
         if ($('#name').is(':empty')){
@@ -41,4 +41,4 @@ $(document).ready(function () {
         $('.ItemName').removeClass('has-error');
         }
         });
-    });
+    });*/
