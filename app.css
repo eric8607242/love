@@ -7,6 +7,20 @@ top:30%;
       margin-right:1px;
       margin-top:1px;*/
 }
+#ansc
+{
+  position:absolute;
+  left:65%;
+  top:15%;
+}
+#laugh
+{
+  width:500px;
+  height:auto;
+  position:absolute;
+  top:15%;
+  left:10%;
+}
 
 .start
 {

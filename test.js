@@ -57,3 +57,11 @@ console.log("你們沒機會");
         }
         });
     });*/
+
+$(document).ready(function(){
+  $(".read").hide();
+}
+
+$("button").click(function(){
+  $(".read").show();
+}
