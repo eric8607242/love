@@ -7,15 +7,15 @@
 .man1
 {
   position:absolute;
-  left:30%;
-  top:13%;
+  left:20%;
+  top:10%;
 }
 #man1self
 {
   position:absolute;
   padding:0px;
   left:43%;
-  top:13%;
+  top:20%;
   background-color:#ff7575;
   -webkit-filter: opacity(90%); /* Safari */
   filter: opacity(90%);
@@ -23,21 +23,22 @@
 
 }
 #info1{
-  -webkit-filter: opacity(0%); /* Safari */
-  filter: opacity(0%);
+ -webkit-filter: blur(4px); /* Safari */
+ filter: blur(4px);
 }
 
 
 #info1:hover{
-  -webkit-filter: opacity(90%); /* Safari */
-  filter: opacity(90%);
+ -webkit-filter: blur(0px); /* Safari */
+ filter: blur(0px);
+
 }
 
 
 .man2
 {
   position:absolute;
-  left:30%;
+  left:20%;
   top:63%;
 
 
@@ -46,7 +47,7 @@
 {
   position:absolute;
   left:43%;
-  top:63%;
+  top:73%;
   padding:0px;
   background-color:#ff7575;
   -webkit-filter: opacity(90%); /* Safari */
@@ -55,26 +56,27 @@
 
 }
 #info2{
-  -webkit-filter: opacity(0%); /* Safari */
-  filter: opacity(0%);
+ -webkit-filter: blur(4px); /* Safari */
+  filter: blur(4px);
 }
 #info2:hover{
-  -webkit-filter: opacity(90%); /* Safari */
-  filter: opacity(90%);
+-webkit-filter: blur(0px); /* Safari */
+  filter: blur(0px);
+
 }
 
 
 .man3
 {
   position:absolute;
-  left:30%;
+  left:20%;
   top:113%;
 }
 #man3self
 {
   position:absolute;
   left:43%;
-  top:113%;
+  top:125%;
   padding:0px;
   background-color:#ff7575;
   -webkit-filter: opacity(90%); /* Safari */
@@ -82,26 +84,27 @@
 
 }
 #info3{
-  -webkit-filter: opacity(0%); /* Safari */
-  filter: opacity(0%);
+ -webkit-filter: blur(4px); /* Safari */
+  filter: blur(4px);
+
 }
 #info3:hover{
-  -webkit-filter: opacity(90%); /* Safari */
-  filter: opacity(90%);
-  }
+-webkit-filter: blur(0px); /* Safari */
+filter: blur(0px);
+}
 
 
 .man4
 {
   position:absolute;
-  left:30%;
+  left:20%;
   top:163%;
 }
 #man4self
 {
   position:absolute;
   left:43%;
-  top:163%;
+  top:175%;
   padding:0px;
   background-color:#ff7575;
   -webkit-filter: opacity(90%); /* Safari */
@@ -109,13 +112,14 @@
 
 }
 #info4{
-  -webkit-filter: opacity(0%); /* Safari */
-  filter: opacity(0%);
+ -webkit-filter: blur(4px); /* Safari */
+  filter: blur(4px);
 }
 
 #info4:hover{
-  -webkit-filter: opacity(90%); /* Safari */
-  filter: opacity(90%);
+-webkit-filter: blur(0px); /* Safari */
+filter: blur(0px);
+
 }
 
 
