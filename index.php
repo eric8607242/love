@@ -14,7 +14,6 @@
   50%{left:-200px; opacity:1;transform:rotate(0deg);}
   75%{left:100px;  opacity:1;transform:rotate(270deg);}
   100%{left:-100px; opacity:1;transform:rotate(0deg);}
-
 }
 .container { position: fixed; }
 .pic { position: absolute; opacity: 0;animation:  mysnow 10s,wave 20s;height: 40px; }
@@ -39,7 +38,6 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
     testAPI();
-
   } else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' +
@@ -51,7 +49,6 @@ function statusChangeCallback(response) {
       'into Facebook.';
   }
 }
-
 // This function is called when someone finishes with the Login
 // Button.  See the onlogin handler attached to it in the sample
 // code below.
@@ -60,7 +57,6 @@ function checkLoginState() {
       statusChangeCallback(response);
       });
 }
-
 window.fbAsyncInit = function() {
   FB.init({
 appId      : '220093275095367',
@@ -69,7 +65,6 @@ cookie     : true,  // enable cookies to allow the server to access
 xfbml      : true,  // parse social plugins on this page
 version    : 'v2.8' // use graph api version 2.8
 });
-
 // Now that we've initialized the JavaScript SDK, we call 
 // FB.getLoginStatus().  This function gets the state of the
 // person visiting this page and can return one of three states to
@@ -81,7 +76,6 @@ version    : 'v2.8' // use graph api version 2.8
 //    your app or not.
 //
 // These three cases are handled in the callback function.
-
 FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
     if (response.status === 'connected') {
@@ -89,9 +83,7 @@ FB.getLoginStatus(function(response) {
     console.log(response.authResponse.accessToken);
     }
     });
-
 };
-
 // Load the SDK asynchronously
 (function(d, s, id) {
  var js, fjs = d.getElementsByTagName(s)[0];
@@ -100,7 +92,6 @@ FB.getLoginStatus(function(response) {
  js.src = "//connect.facebook.net/en_US/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));
-
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
 function testAPI() {
@@ -112,11 +103,9 @@ function testAPI() {
       access = response.id;
       });
 }
-
 FB.api('/me', function(response) {
     console.log(JSON.stringify(response));
     });
-
 alert(access);
 </script>
 
@@ -132,7 +121,6 @@ alert(access);
 <body bgcolor="pink">
 <!--
 <nav>
-
 <li class="board">
 <a href="#" class="boardtitle">關於遊戲</a>
 <div class="slidedown">
@@ -140,26 +128,23 @@ alert(access);
 <a href="howtoplay.html" class="slidedownindex">遊戲玩法</a>
 </div>
 </li>
-
 <li class="board">
 <a href="self.html" class="boardtitle">關於開發者</a>
 </div>
 </li>
-
 </nav>
 -->
 <p>
 <div id = "love"><img src=https://c2.staticflickr.com/6/5563/30647775783_36aee866c8_o.png"
 alt=love align="center" border="0">
 </div>
-<a id="testher" href="test.html"><p class = "start1"><img class = "start" src="https://github.com/eric8607242/love/blob/master/start.png?raw=true" width ="283" height ="125">
+<a id="testher" href="test.php"><p class = "start1"><img class = "start" src="https://github.com/eric8607242/love/blob/master/start.png?raw=true" width ="283" height ="125">
 </p></a>
 <br>
-<a id="her" href="self.html"  style="text-decoration:none;" ><b id = "goself"><font face="cursive" size="5" color="black">
+<a id="her" href="self.php"  style="text-decoration:none;" ><b id = "goself"><font face="cursive" size="5" color="black">
 About us
 </b></a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
-
 </p>
 <div id="snowFlow" > 
 </div>
@@ -188,8 +173,6 @@ window.onload=function(){
       var src = 'snow.png';
       snowFlow(left,height,src);
       },500)
-
 }
-
 </script>
 </html>

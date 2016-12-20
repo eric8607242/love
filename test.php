@@ -30,8 +30,31 @@
 他的生日:<input type = "text" id="bir1" placeholder="ex.0000/00/00">
 <br><br><br>
 </div>
-<!--<button onclick="move()" type = "submit" class="btn_test" id="send">開始測驗!!</button><br><br>-->
+<button onclick="move()" type = "submit" class="btn_test" id="send">開始測驗!!</button><br><br>
 </form>
+<?php
+session_start();
+
+$dbhost = 'localhost';
+$dbuser = 'wp2016_groupE';
+$dbpass = 'lovedivine';
+$dbname = 'wp2016_groupE';
+// Create connection
+$conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+// Check connection
+if ($conn->connect_errno) {
+  echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+else echo "connect";
+
+$stmt = $conn->prepare("MyGuests(firstname, lastname, email) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $firstname, $lastname, $email);
+$sql = "MyGuests(firstname,lastname,email)VALUE('John','Doe','john@example.com')";
+
+$stmt->close();
+$conn->close();
+?>
+
 </font>
 <div id="progress">
 <div id="bar">
@@ -40,9 +63,6 @@
 </div>
 <br>
 
-<div class = "gogo">
-<button onclick="move()" class="btn_test" id="send" >開始測驗</button>
-</div>
 
 
 </body>
