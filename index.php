@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-@keyframes mysnow {
-  0% {  bottom: 100%; opacity: 0; }
-  25%{  bottom:50%;   opacity:1; }
-  50% { bottom:30%;   opacity:1; }
-  100% {bottom: 0%;   opacity:1; }
-}
-@keyframes wave {
-  0%{left:0px; opacity: 0;}
-  25%{left:200px; opacity:1;transform:rotate(360deg);}
-  50%{left:-200px; opacity:1;transform:rotate(0deg);}
-  75%{left:100px;  opacity:1;transform:rotate(270deg);}
-  100%{left:-100px; opacity:1;transform:rotate(0deg);}
-}
-.container { position: fixed; }
-.pic { position: absolute; opacity: 0;animation:  mysnow 10s,wave 20s;height: 40px; }
-</style> 
-</head>
 <body> 
 <meta charset= "utf-8">
 <link rel=stylesheet type="text/css" href="app.css">
