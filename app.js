@@ -1,4 +1,4 @@
-/*function move() {
+function move() {
   var elem = document.getElementById("bar");
   var width = 0;
   var pgbar = setInterval(run, 10);
@@ -13,4 +13,4 @@
     
   }
 }
-*/
+
