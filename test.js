@@ -6,7 +6,7 @@ $(document).ready(function(){
 
   function saveData(){
     $.get('database.njs',function(data){
-      console.log(data);
+      console.log('eric');
     });
   }
 });
