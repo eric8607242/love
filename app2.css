@@ -1,0 +1,61 @@
+#love
+{
+position: absolute;
+left:43%;
+top:30%;
+    /*margin-left:1px;
+      margin-right:1px;
+      margin-top:1px;*/
+}
+#ansc
+{
+  position:absolute;
+  left:65%;
+  top:15%;
+}
+#laugh
+{
+  width:500px;
+  height:auto;
+  position:absolute;
+  top:15%;
+  left:10%;
+}
+
+.start
+{
+width:10%;
+height:auto;
+position:absolute;
+left:46%;
+top:78%;
+}
+
+#goself
+{
+position:absolute;
+top:85%;
+left:42%;
+     margin-top:5px;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1.5);
+opacity: 1,0;
+  }
+  50% {
+    -webkit-transform: scale(2.0);
+opacity: 1.0;
+  }
+  to { 
+    -webkit-transform: scale(1.5);
+opacity: 1.0;
+  }
+}
+
+#love:hover { 
+  -webkit-animation-name: pulse;  
+  -webkit-animation-duration: 0.5s; 
+  -webkit-animation-iteration-count: 10;
+}
