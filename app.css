@@ -1,10 +1,12 @@
-/*#upline{
- display: inline-block;
- width: 200px;
- height: 100px;
- margin: 1em;
+#abu{
+ float:right;
+} 
+#abg{
+ float:right;
 }
-*/
+#tr{
+ float:right;
+}
 #bg{
  margin:auto;
  padding:auto;
