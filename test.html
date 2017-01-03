@@ -4,13 +4,14 @@
 <meta charset="utf-8">
 <link rel=stylesheet type="text/css" href="test.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="test.js"></script>
+<!-- <script src="test.js"></script> -->
 <script src="bar.js"></script>
 </head>
-<body>
+
+<body id="testbody">
 <font face="cursive" size="10" color="black">
-<div id="you">你</div>
-<div id="he">他</div>
+  <div id="you">你</div>
+  <div id="he">他</div>
 </font>
 
 
@@ -31,15 +32,21 @@
 <br><br><br>
 </div>
 </font>
-<button>開始測驗!!</button><br><br>
+    <div>
+      <ul class="navi">
+        <li class="home"><a href="index.html">回到主頁</a></li>
+        <li id="send"><a href="#">確認送出</a></li>
+      </ul>
+    </div>
+<!--
+<button onclick=move()>開始測驗!!</button><br><br>
 <div id="progress">
-<div id="bar">
-<div id="label">0%</div>
+  <div id="bar">
+    <div id="label">0%</div>
+  </div>
 </div>
-</div>
+
 <br>
-
-
-
+-->
 </body>
 </html>

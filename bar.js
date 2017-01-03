@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  function move() {
+//$(document).ready(function() { 
+function move() {
     var elem = document.getElementById("bar");
     var width = 0;
     var pgbar = setInterval(run, 10);
@@ -13,5 +13,5 @@ $(document).ready(function() {
       }
       
     }
-  }
-})
+ // }
+}//)
