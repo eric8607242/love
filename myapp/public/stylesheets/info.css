@@ -1,0 +1,77 @@
+.mySlides{
+  margin-left:33%;
+display: none;
+}
+.overlay1{
+position: absolute;
+bottom: 100%;
+left: 39%;
+right: 0;
+       background-color: lightgreen;
+overflow: hidden;
+width: 22%;
+height:0;
+transition: .5s ease;
+}
+.overlay2{
+position: absolute;
+bottom: 100%;
+left: 39%;
+right: 0;
+       background-color: lightgreen;
+overflow: hidden;
+width: 22%;
+height:0;
+transition: .5s ease;
+}
+.overlay3{
+position: absolute;
+bottom: 100%;
+left: 39%;
+right: 0;
+       background-color: lightgreen;
+overflow: hidden;
+width: 22%;
+height:0;
+transition: .5s ease;
+}
+.overlay4{
+position: absolute;
+bottom: 100%;
+left: 39%;
+right: 0;
+       background-color: lightgreen;
+overflow: hidden;
+width: 22%;
+height:0;
+transition: .5s ease;
+}
+.pic1:hover .overlay1 {
+bottom: 0; 
+height: 100%;
+}
+.pic2:hover .overlay2 {
+bottom: 0; 
+height: 100%;
+}
+.pic3:hover .overlay3 {
+bottom: 0; 
+height: 100%;
+}
+.pic4:hover .overlay4 {
+bottom: 0; 
+height: 100%;
+}
+
+
+.text {
+  white-space: nowrap; 
+color: white;
+       font-size: 20px;
+position: absolute;
+overflow: hidden;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+           -ms-transform: translate(-50%, -50%);
+}
