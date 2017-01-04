@@ -12,7 +12,7 @@
   });
  */
 $(document).ready(function(){
-    $('#btn').click(function(){
+    $('#send').click(function(){
         console.log("gogogo")
         event.preventDefault();
         $.ajax({
