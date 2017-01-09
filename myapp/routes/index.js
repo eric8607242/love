@@ -20,6 +20,10 @@ router.get('/info',function(reg,res,next){
     res.sendFile(path.join(__dirname, '../views', 'info.html'));
     });
 
+router.post('/userin',function(reg,res){
+  console.log('userssuccess');
+})
+
 
 
 module.exports = router;

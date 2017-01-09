@@ -15,10 +15,20 @@ $(document).ready(function(){
     $('#send').click(function(){
         console.log("gogogo")
         event.preventDefault();
+
+        var data = {
+          name:$("#name").val(),
+          name1:$("#name1").val(),
+          email:$("#email").val(),
+        }
+        console.log(data.name);
+        console.log("upup");
         $.ajax({
 type: "post",
 url: "/test/saveData",
+data:data,
 datatype: "JSON",
+//data: data,
 success: function(res){
 console.log(res);
 }
