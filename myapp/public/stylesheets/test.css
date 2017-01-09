@@ -64,6 +64,9 @@ text-align: center;
 line-height: 30px;
 color: white;
 }
+#option{
+  margin-left:40%;
+}
 ul.navi li{
  list-style-type:none;
  display:block;
