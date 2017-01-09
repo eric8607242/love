@@ -22,7 +22,8 @@ $(document).ready(function(){
           email1:$("#email1").val(),
           bir:$("#bir1").val()
         }
-        console.log(data.name);
+
+        console.log(userID);
         console.log("upup");
        $.ajax({
 type: "post",

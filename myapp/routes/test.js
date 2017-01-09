@@ -29,11 +29,14 @@ database: 'wp2016_groupE'
     console.log(req.body.name);
 
 var post = {
+  fbID : req.body.fbID,
+  love : req.body.love,
   loveemail : req.body.email,
   beloved : req.body.name1,
   belovedemail : req.body.email1,
   belovedbir: req.body.bir
 }
+
 var insert1 = 'insert into MyGusets set ?';
 var insert = 'INSERT INTO MyGuests SET ?';
 var insertSQL = 'insert into MyGuests(firstname) values(+req.body.name+)';
@@ -49,7 +52,7 @@ connection.connect(function(error){
     {
     console.log("gogo");
     connection.query(insert,post,function(err,res){
-        if(error)
+        if(err)
         {
         console.log('nonono');
         }

@@ -5,7 +5,7 @@
 <link href="stylesheets/test.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="javascripts/bar.js"></script>
-<script src="javascripts/saveuser.js"></script>
+<!--<script src="javascripts/saveuser.js"></script>-->
 
 <script>
 var userID;
@@ -89,27 +89,59 @@ function testAPI() {
       userID = response.id;
       userNAME = response.name;
       userEMAIL = response.email;
-
       var data = {
-ID:userID,
-name:userNAME,
-email:userEMAIL
-}
+        ID:userID,
+        name:userNAME,
+        email:userEMAIL
+      }
 
 //console.log(userID);
-$.ajax({
+/*$.ajax({
 type: "post",
-url:"/saveUser",
+url:"/test/saveUser",
 data:data,
 datatype:"JSON",
 success:function(res){
 console.log(res);
 }
-})
-//document.getElementById('status').innerHTML =
-//'Welcome, ' + response.name + '!';
+})*/
 });
 }
+$(document).ready(function(){
+    $('#send').click(function(){
+        console.log("gogogo")
+        event.preventDefault();
+        /////////////
+        FB.api('/me', function(response) {
+            access = response.id;
+            userID = response.id;
+            userNAME = response.name;
+            userEMAIL = response.email;
+            //////////////
+            var data = {
+            name1:$("#name1").val(),
+            email:$("#email").val(),
+            email1:$("#email1").val(),
+            bir:$("#bir1").val(),
+            fbID:userID,
+            love:userNAME
+            }
+console.log(userID);
+console.log("upup");
+$.ajax({
+type: "post",
+url: "/test/saveData",
+data:data,
+datatype: "JSON",
+//data: data,
+success: function(res){
+console.log(res);
+}
+});
+});
+});
+});
+
 
 </script>
 </head>
