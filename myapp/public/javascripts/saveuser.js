@@ -17,13 +17,14 @@ $(document).ready(function(){
         event.preventDefault();
 
         var data = {
-          name:$("#name").val(),
           name1:$("#name1").val(),
           email:$("#email").val(),
+          email1:$("#email1").val(),
+          bir:$("#bir1").val()
         }
         console.log(data.name);
         console.log("upup");
-        $.ajax({
+       $.ajax({
 type: "post",
 url: "/test/saveData",
 data:data,

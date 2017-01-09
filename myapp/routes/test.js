@@ -1,22 +1,11 @@
-/*$(document).ready(function(){
-  $('button').click(function(){
-  console.log('hi');
-  saveData();
-  });
-
-  function saveData(){
-  $.get('database.njs',function(data){
-  console.log('eric');
-  });
-  }
-  });*/
-
 var express = require('express');
 var path = require('path');
 var mysql = require('mysql');
 var querystring=require('querystring');
 var router = express.Router();
 var utf8 = require('utf8');
+
+
 router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../view', 'test.html'));
     });
@@ -38,18 +27,12 @@ password: 'lovedivine',
 database: 'wp2016_groupE'
 });
     console.log(req.body.name);
-    /*req.on('data', function(data) {
-      name += data.name;
-      console.log(data.name);
-      console.log("fffff");
-      name1 += data.name1;
-      });
-     */
 
 var post = {
-  firstname : req.body.name,
-  lastname : req.body.name1,
-  email : req.body.email
+  loveemail : req.body.email,
+  beloved : req.body.name1,
+  belovedemail : req.body.email1,
+  belovedbir: req.body.bir
 }
 var insert1 = 'insert into MyGusets set ?';
 var insert = 'INSERT INTO MyGuests SET ?';
@@ -73,36 +56,13 @@ connection.connect(function(error){
         else
         {
         console.log('insert success');
-        /*connection.query(,function(err1,res){
-            if(err1)
-            {
-            console.log('gg');
-            }
-            else
-            {
-            console.log("SELECT ==> ");
-            for (var i in rows) {
-            console.log(rows[i]);
-            }
-            }
-            });*/
         }
     });
-
     }
 });
-/*connection.query(insertSQL,function(err,res){
-  if(error)
-  {
-  console.log('nonono');
-  }
-  else
-  {
-  console.log('insert success');
-  }
-  });*/
+
 });
 
 
-module.exports = router;
+  module.exports = router;
 
