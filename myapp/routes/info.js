@@ -7,6 +7,8 @@ router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../view', 'info.html'));
     });
 
+
+
 module.exports = router;
 /*router.post('/saveData',function(reg,res){
     console.log('success');
