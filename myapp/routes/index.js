@@ -32,6 +32,17 @@ router.get('/info',function(req,res,next){
     res.sendFile(path.join(__dirname, '../views', 'info.html'));
     });
 
+router.get('/abg',function(req,res,next){ 
+    console.log('success'); 
+    res.sendFile(path.join(__dirname, '../views', 'abg.html'));
+    });
+
+router.get('/tr',function(req,res,next){
+    console.log('success');
+        res.sendFile(path.join(__dirname, '../views', 'tr.html'));
+            });
+
+
 router.post('/userin',function(req,res){
     console.log('userssuccess');
     })
