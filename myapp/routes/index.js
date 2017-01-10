@@ -11,6 +11,16 @@ router.get('/', function(req, res, next) {
     console.log('jj123123');
 
     });
+router.get('/abg', function(req, res,next) {
+    console.log('success');
+    res.sendFile(path.join(__dirname, '../views', 'abg.html'));
+    });
+
+router.get('/tr', function(req, res,next) {
+    console.log('success');
+    res.sendFile(path.join(__dirname, '../views', 'tr.html'));
+    });
+
 
 router.get('/test',function(reg,res,next){
     console.log('success');
