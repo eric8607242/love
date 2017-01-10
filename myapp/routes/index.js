@@ -29,8 +29,14 @@ router.get('/abg',function(req,res,next){
 
 router.get('/tr',function(req,res,next){
     console.log('success');
-        res.sendFile(path.join(__dirname, '../views', 'tr.html'));
-            });
+    res.sendFile(path.join(__dirname, '../views', 'tr.html'));
+    });
+
+router.get('/result',function(req,res,next){
+    console.log('success');
+    res.sendFile(path.join(__dirname, '../views', 'result.html'));
+    });
+
 
 
 router.post('/userin',function(req,res){
@@ -46,17 +52,17 @@ user: 'wp2016_groupE',
 password: 'lovedivine',
 database: 'wp2016_groupE' 
 });
-console.log("1111111111");
+    console.log("1111111111");
     var post = {
 love : req.body.name,
 fbID : req.body.ID
 //email : req.body.email
 }
-  var insert = 'INSERT INTO MyGuests SET ?';  
-  var insert1 = 'insert into MyGusets set ?'; 
-  console.log(req.body.name);
-  console.log(req.body.ID);
-  //console.log(req.body.email);
+var insert = 'INSERT INTO MyGuests SET ?';  
+var insert1 = 'insert into MyGusets set ?'; 
+console.log(req.body.name);
+console.log(req.body.ID);
+//console.log(req.body.email);
 connection.connect(function(error){
   if(error)
   {
@@ -78,5 +84,5 @@ connection.connect(function(error){
       });
   }
   });
-})
+});
 module.exports = router;
