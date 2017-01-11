@@ -92,65 +92,37 @@ function testAPI() {
       userID = response.id;
       userNAME = response.name;
       userEMAIL = response.email;
-      var data = {
-ID:userID,
-name:userNAME,
-email:userEMAIL
-}
-
-//console.log(userID);
-/*$.ajax({
-type: "post",
-url:"/test/saveUser",
-data:data,
-datatype:"JSON",
-success:function(res){
-console.log(res);
-}
-})*/
-});
+      });
 }
 $(document).ready(function(){
-    $('#send').click(function(){
+    $('#111').click(function(){
         console.log("gogogo")
         event.preventDefault();
-        /////////////
         FB.api('/me', function(response) {
             access = response.id;
             userID = response.id;
             userNAME = response.name;
             userEMAIL = response.email;
             //////////////
-            var data = {
-name1:$("#name1").val(),
-email:$("#email").val(),
-email1:$("#email1").val(),
-bir:$("#bir1").val(),
-fbID:userID,
-love:userNAME
-}
-console.log(userID);
+
+        var data = {
+        name1:userNAME
+        }
+console.log(userNAME);
 console.log("upup");
 $.ajax({
 type: "post",
-url: "/test/saveData",
+url: "/result/check",
 data:data,
 datatype: "JSON",
-//data: data,
 success: function(res){
-console.log(res);
+window.alert(res);
 }
 });
 });
 });
-/*$('#send').click(function(){
-  $.ajax({
-type:"get",
-url:"/test/result",
-datatype
-})
-})*/  
 });
+
 
 
 </script>
@@ -164,22 +136,19 @@ datatype
 <a class="navbar-brand" href="#">LoveDivine</a>
 </div>
 <ul class="nav navbar-nav">
-<li><a data-toggle="tab" href="/">Home</a></li>
-<li><a data-toggle="tab" href="/abg">About the game</a></li>
-<li><a data-toggle="tab" href="/tr">Test rules</a></li>
-<li><a data-toggle="tab" href="/info">About us</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/abg">About the game</a></li>
+<li><a href="/tr">Test rules</a></li>
+<li><a href="/info">About us</a></li>
 </ul>
 </div>
 </div>   
 <div class="nav navbar-inverse navbar-fixed-bottom">
 <div class="container-fluid">
-<div class="123">
-查詢:<input type = "text" id="name123" placeholder="ex.0000/00/00">
-</div>
 <li id="111" color="white">gogo</li>
 <ul class="nav navbar-nav navbar-right">
 <li><a data-toggle="tab" href="#menu2">User Feedback</a></li>
-<li><a data-toggle="tab" href="#menu1">Check the result</a></li>
+<li><a href="/result">Check the result</a></li>
 </ul>
 </div>
 </div>   

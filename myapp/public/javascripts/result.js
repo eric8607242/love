@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     $('#111').click(function(){
         console.log("gogogo")
         event.preventDefault();
@@ -20,4 +20,4 @@ window.alert(res);
 })
 })
 });
-
+*/
