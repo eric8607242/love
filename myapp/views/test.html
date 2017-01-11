@@ -90,10 +90,10 @@ function testAPI() {
       userNAME = response.name;
       userEMAIL = response.email;
       var data = {
-        ID:userID,
-        name:userNAME,
-        email:userEMAIL
-      }
+ID:userID,
+name:userNAME,
+email:userEMAIL
+}
 
 //console.log(userID);
 /*$.ajax({
@@ -119,13 +119,14 @@ $(document).ready(function(){
             userEMAIL = response.email;
             //////////////
             var data = {
-            name1:$("#name1").val(),
-            email:$("#email").val(),
-            email1:$("#email1").val(),
-            bir:$("#bir1").val(),
-            fbID:userID,
-            love:userNAME
-            }
+ma:$("#ma").val(),
+age:$("#age").val(),
+name1:$("#name1").val(),
+ma1:$("#ma1").val(),
+age1:$("#age1").val(),
+fbID:userID,
+love:userNAME
+}
 console.log(userID);
 console.log("upup");
 $.ajax({
@@ -136,17 +137,18 @@ datatype: "JSON",
 //data: data,
 success: function(res){
 console.log(res);
+window.alert(res);
 }
 });
 });
 });
-  /*$('#send').click(function(){
-    $.ajax({
-      type:"get",
-      url:"/test/result",
-      datatype
-    })
-  })*/  
+/*$('#send').click(function(){
+  $.ajax({
+type:"get",
+url:"/test/result",
+datatype
+})
+})*/  
 });
 
 
@@ -162,27 +164,116 @@ console.log(res);
 
 <font face="cursive" size="4" color="black">
 <div class="lover">
-你的名字:<input type = "text" id="name" name = "name" placeholder="ex.牛郎">
+你的科系:
+<select class="form-control" id="ma" name="ItemCategory">
+<option value="數學系">數學系       </option>
+<option value="中文系">中文系       </option>
+<option value="外文系">外文系       </option>
+<option value="歷史系">歷史系       </option>
+<option value="化學系">化學系       </option>
+<option value="物理系">物理系       </option>
+<option value="地科系">地科系       </option>
+<option value="光電系">光電系       </option>
+<option value="會計系">會計系       </option>
+<option value="統計系">統計系       </option>
+<option value="企管系">企管系       </option>
+<option value="交管系">交管系       </option>
+<option value="機械系">機械系       </option>
+<option value="化工系">化工系       </option>
+<option value="土木系">土木系       </option>
+<option value="材料系">材料系       </option>
+<option value="水利系">水利系       </option>
+<option value="工科系">工科系       </option>
+<option value="系統系">系統系       </option>
+<option value="航太系">航太系       </option>
+<option value="資源系">資源系       </option>
+<option value="環工系">環工系       </option>
+<option value="醫工系">醫工系       </option>
+<option value="測量系">測量系       </option>
+<option value="電機系">電機系       </option>
+<option value="資訊系">資訊系       </option>
+<option value="法律系">法律系       </option>
+<option value="政治系">政治系       </option>
+<option value="經濟系">經濟系       </option>
+<option value="心理系">心理系       </option>
+<option value="建築系">建築系       </option>
+<option value="都計系">都計系       </option>
+<option value="工設系">工設系       </option>
+<option value="生科系">生科系       </option>
+<option value="醫學系">醫學系       </option>
+<option value="藥學系">藥學系       </option>
+<option value="護理系">護理系       </option>
+<option value="物治系">物治系       </option>
+<option value="職治系">職治系       </option>
+</select>
 <br><br><br>
-你的生日:<input type = "text" id="bir" placeholder="ex.0000/00/00">
-<br><br><br>
-你的信箱:<input type = "text" id="email" placeholder="ex123456@gmail.com">
-<br><br><br>
+你的年級:
+<select class="form-control1" id="age" name="ItemCategory">
+<option value="1">1             </option>
+<option value="2">2             </option>
+<option value="3">3             </option>
+<option value="4">4             </option>
+</select>
 </div>
-
 <div class="beloved">
 他的名字:<input type = "text" id="name1" name = "name1" placeholder="ex.織女">
 <br><br><br>
-他的生日:<input type = "text" id="bir1" placeholder="ex.0000/00/00">
+他的科系:
+<select class="form-control" id="ma1" name="ItemCategory">
+<option value="數學系">數學系        </option>
+<option value="中文系">中文系        </option>
+<option value="外文系">外文系</option>
+<option value="歷史系">歷史系</option>
+<option value="化學系">化學系</option>
+<option value="物理系">物理系</option>
+<option value="地科系">地科系</option>
+<option value="光電系">光電系</option>
+<option value="會計系">會計系</option>
+<option value="統計系">統計系</option>
+<option value="企管系">企管系</option>
+<option value="交管系">交管系</option>
+<option value="機械系">機械系</option>
+<option value="化工系">化工系</option>
+<option value="土木系">土木系</option>
+<option value="材料系">材料系</option>
+<option value="水利系">水利系</option>
+<option value="工科系">工科系</option>
+<option value="系統系">系統系</option>
+<option value="航太系">航太系</option>
+<option value="資源系">資源系</option>
+<option value="環工系">環工系</option>
+<option value="醫工系">醫工系</option>
+<option value="測量系">測量系</option>
+<option value="電機系">電機系</option>
+<option value="資訊系">資訊系</option>
+<option value="法律系">法律系</option>
+<option value="政治系">政治系</option>
+<option value="經濟系">經濟系</option>
+<option value="心理系">心理系</option>
+<option value="建築系">建築系</option>
+<option value="都計系">都計系</option>
+<option value="工設系">工設系</option>
+<option value="生科系">生科系</option>
+<option value="醫學系">醫學系</option>
+<option value="藥學系">藥學系</option>
+<option value="護理系">護理系</option>
+<option value="物治系">物治系</option>
+<option value="職治系">職治系</option>
+</select>
 <br><br><br>
-他的信箱:<input type = "text" id="email1" placeholder="ex123456@gmail.com">
-<br><br><br>
+他的年級:
+<select class="form-control1" id="age1" name="ItemCategory">
+<option value="1">1             </option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
 </div>
 </font>
 <div id="option">
 <ul class="navi">
 <li class="home"><a href="/">回到主頁</a></li>
-<li id="send">確認送出</li>
+<li id="send"><a href="">確認送出</li>
 </ul>
 </div>
 <!--

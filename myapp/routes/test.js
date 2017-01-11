@@ -31,10 +31,11 @@ database: 'wp2016_groupE'
 var post = {
   fbID : req.body.fbID,
   love : req.body.love,
-  loveemail : req.body.email,
+  ma : req.body.ma,
+  age : req.body.age,
   beloved : req.body.name1,
-  belovedemail : req.body.email1,
-  belovedbir: req.body.bir
+  ma1 : req.body.ma1,
+  age1 : req.body.age1
 }
 
 var insert1 = 'insert into MyGusets set ?';
@@ -50,8 +51,18 @@ connection.connect(function(error){
     }
     else
     {
+    if(req.body.fbID == null)
+    {
+      res.send("請登入FB");
+    }
+    else if(req.body.name1 == null)
+    {
+      res.send("每一項資料都要填寫喔");
+    }
+    else
+    {
     console.log("gogo");
-    connection.query(insert,post,function(err,res){
+    connection.query(insert,post,function(err){
         if(err)
         {
         console.log('nonono');
@@ -59,8 +70,10 @@ connection.connect(function(error){
         else
         {
         console.log('insert success');
+        res.send("已經收到你的資訊囉~等等月老的幫忙吧")
         }
     });
+    }
     }
 });
   
