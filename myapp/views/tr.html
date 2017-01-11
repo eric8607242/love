@@ -1,17 +1,36 @@
 <html>
 <head>
-<title>About us</title>
+<title>Test rule</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<link rel=stylesheet type="text/css" href="info.css">
 <link href="stylesheets/info.css" rel="stylesheet">
 </head>
-
-<body>
+<style>
+  #idea{
+    margin-top:10%;
+    margin-left:52%;
+    font-size:2.2em;
+    color:black;
+  }
+  #idea2{
+    margin-top:1%;
+    margin-left:70%;
+    font-size:2.2em;
+    color:red;
+  }
+  #trbg{
+    margin:auto;
+    padding:auto;
+    background:#000 url(https://c5.staticflickr.com/1/428/31399726924_4b147de1ac_b.jpg) center center fixed no-repeat;
+    background-size: cover;
+        
+  }
+</style>
+<body id="trbg">
 <div class="nav navbar-inverse navbar-fixed-top">
 <div class="container-fluid">
 <div >
@@ -27,12 +46,27 @@
 </div>   
 <div class="nav navbar-inverse navbar-fixed-bottom">
 <div class="container-fluid">
-
 <ul class="nav navbar-nav navbar-right">
-<li><a data-toggle="tab" href="#menu2">User Feedback</a></li>
-<li><a data-toggle="tab" href="#menu1">Check the result</a></li>
+<li><a href="#menu2">User Feedback</a></li>
+<li><a href="/result">Check the result</a></li>
 </ul>
 </div>
 </div>   
+
+<div id="idea">
+<p>
+   <b>測試規則-配對4步驟<br>1.請使用者填完所有基本資料<br>2.填畢後點擊確認送出
+               <br>3.點擊右下角Check the result後即可確認配對結果
+               <br>4.若你喜歡的人也在本網站填他喜歡你，即配對成功
+   </b>
+</p>
+</div>
+<div id="idea2">
+<p>
+  <b>註:系統將於每個月一號清空資料</b>
+</p>
+</div>
+
+
 </body>
 </html>
