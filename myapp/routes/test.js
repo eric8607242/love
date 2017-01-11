@@ -37,7 +37,6 @@ var post = {
   ma1 : req.body.ma1,
   age1 : req.body.age1
 }
-
 var insert1 = 'insert into MyGusets set ?';
 var insert = 'INSERT INTO MyGuests SET ?';
 var insertSQL = 'insert into MyGuests(firstname) values(+req.body.name+)';
@@ -51,11 +50,11 @@ connection.connect(function(error){
     }
     else
     {
-    if(req.body.fbID == null)
+    if(req.body.fbID == null || req.body.fbID == '')
     {
       res.send("請登入FB");
     }
-    else if(req.body.name1 == null)
+    else if(req.body.name1 == null || req.body.name1 == '')
     {
       res.send("每一項資料都要填寫喔");
     }

@@ -19,13 +19,11 @@ password: 'lovedivine',
 database: 'wp2016_groupE'
 });
     var name = req.body.name1;
-    console.log(name);
-
     var post = {
 beloved : req.body.name1
 }
 var select = 'SELECT love FROM MyGuests WHERE beloved = ?'
-var select1 = 'SELECT * FROM MyGuests WHERE beloved = "'+req.body.name1+'"';
+var select1 = 'SELECT * FROM MyGuests WHERE love = "'+req.body.name1+'"';
 var select2 = 'SELECT * FROM MyGuests WHERE beloved = ?';
 var love1;
 var love2;
@@ -50,22 +48,23 @@ connection.connect(function(error){
       else
       {
       console.log("select");
-      if(rows == null)
+      if(rows == null ||rows == '')
       {
-        res.send("沒有人和你相愛!!")
+        res.send("先去輸入資料吧~~");
       }
       else
       {
-        love1 = rows[0].love;
+        console.log("444444444444");
+        love1 = rows[0].beloved;
         love1ma1 = rows[0].ma;
         love1age1 = rows[0].age;
         love1ma2 = rows[0].ma1;
         love1age2 = rows[0].age1;
-        console.log(rows[0].love);
+        //console.log(rows[0].love);
         console.log("888");
         console.log(love1);
         //res.send(''+rows[0].love+'正偷偷的喜歡你喔'); 
-        var select3 = 'SELECT * FROM MyGuests WHERE beloved = "'+love1+'"';
+        var select3 = 'SELECT * FROM MyGuests WHERE love = "'+love1+'"';
         connection.query(select3,function(err,rows){
           if(err)
           {
@@ -74,14 +73,13 @@ connection.connect(function(error){
           else
           {
           console.log("select1");
-          if(rows == null)
+          if(rows == '' ||rows == null)
           {
             res.send("沒有人和你相愛")
           }
           else
-          {
-          love2 = rows[0].love;
-          console.log(love2)
+          { 
+          love2 = rows[0].beloved;
           love2ma1 = rows[0].ma;
           love2age1 = rows[0].age;
           love2ma2 = rows[0].ma1;
