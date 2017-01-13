@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <link href="stylesheets/test.css" rel="stylesheet">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="javascripts/bar.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 <!--<script src="javascripts/saveuser.js"></script>-->
 
 <script>
@@ -142,13 +144,34 @@ window.alert(res);
 });
 });
 });
-/*$('#send').click(function(){
-  $.ajax({
-type:"get",
-url:"/test/result",
-datatype
-})
-})*/  
+$('#111').click(function(){
+    console.log("gogogo")
+    event.preventDefault();
+    FB.api('/me', function(response) {
+        access = response.id;
+        userID = response.id;
+        userNAME = response.name;
+        userEMAIL = response.email;
+        //////////////
+
+        var data = {
+name1:userNAME
+}
+console.log(userNAME);
+console.log("upup");
+$.ajax({
+type: "post",
+url: "/result/check",
+data:data,
+datatype: "JSON",
+success: function(res){
+window.alert(res);
+}
+});
+});
+});
+
+
 });
 
 
@@ -156,6 +179,32 @@ datatype
 </head>
 <body id="testbody">
 
+<div class="nav navbar-inverse navbar-fixed-top">
+<div class="container-fluid">
+<div >
+<a class="navbar-brand">LoveDivine</a>
+</div>
+<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+<li><a href="/abg">About the game</a></li>
+<li><a href="/tr">Test rules</a></li>
+<li><a href="/info">About us</a></li>
+</ul>
+</div>
+</div>   
+<div class="nav navbar-inverse navbar-fixed-bottom">
+<div class="container-fluid">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#menu2">User Feedback</a></li>
+<li><a href="/result">Check the result</a></li>
+</ul>
+</div>
+</div>   
+
+<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true" scope = "public_profile,email" onlogin = "checkLoginState();">
+</div> 
+<!--show fb login status-->
+<div id="status"></div>
 <font face="cursive" size="10" color="black">
 <div id="you">你</div>
 <div id="he">他</div>
@@ -165,7 +214,7 @@ datatype
 <font face="cursive" size="4" color="black">
 <div class="lover">
 你的科系:
-<select class="form-control" id="ma" name="ItemCategory">
+<select class="form-control111" id="ma" name="ItemCategory">
 <option value="數學系">數學系       </option>
 <option value="中文系">中文系       </option>
 <option value="外文系">外文系       </option>
@@ -208,7 +257,7 @@ datatype
 </select>
 <br><br><br>
 你的年級:
-<select class="form-control1" id="age" name="ItemCategory">
+<select class="form-control111" id="age" name="ItemCategory">
 <option value="1">1             </option>
 <option value="2">2             </option>
 <option value="3">3             </option>
@@ -216,12 +265,12 @@ datatype
 </select>
 </div>
 <div class="beloved">
-他的名字:<input type = "text" id="name1" name = "name1" placeholder="ex.織女">
+他臉書的名字:<input type = "text" id="name1" name = "name1" placeholder="ex.織女">
 <br><br><br>
 他的科系:
-<select class="form-control" id="ma1" name="ItemCategory">
-<option value="數學系">數學系        </option>
-<option value="中文系">中文系        </option>
+<select class="form-control111" id="ma1" name="ItemCategory">
+<option value="數學系">數學系               </option>
+<option value="中文系">中文系               </option>
 <option value="外文系">外文系</option>
 <option value="歷史系">歷史系</option>
 <option value="化學系">化學系</option>
@@ -262,7 +311,7 @@ datatype
 </select>
 <br><br><br>
 他的年級:
-<select class="form-control1" id="age1" name="ItemCategory">
+<select class="form-control111" id="age1" name="ItemCategory">
 <option value="1">1             </option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -272,8 +321,10 @@ datatype
 </font>
 <div id="option">
 <ul class="navi">
+
 <li class="home"><a href="/">回到主頁</a></li>
-<li id="send"><a href="">確認送出</li>
+<li id="send"><a href="">確認送出</a></li>
+<li id="111"><a href="">查詢結果</a></li>
 </ul>
 </div>
 <!--

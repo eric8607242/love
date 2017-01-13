@@ -44,7 +44,7 @@ router.get('/tr',function(req,res,next){
 
 router.get('/result',function(req,res,next){
     console.log('success');
-    res.sendFile(path.join(__dirname, '../views', 'result.html'));
+    //res.sendFile(path.join(__dirname, '../views', 'result.html'));
     });
 
 

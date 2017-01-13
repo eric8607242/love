@@ -39,7 +39,6 @@ console.log(req.body.name1);
 connection.connect(function(error){ 
   if(!error)
   {
-  console.log("ericeric");
   connection.query(select1,function(err,rows){
       if(err)
       {
@@ -54,14 +53,12 @@ connection.connect(function(error){
       }
       else
       {
-        console.log("444444444444");
         love1 = rows[0].beloved;
         love1ma1 = rows[0].ma;
         love1age1 = rows[0].age;
         love1ma2 = rows[0].ma1;
         love1age2 = rows[0].age1;
         //console.log(rows[0].love);
-        console.log("888");
         console.log(love1);
         //res.send(''+rows[0].love+'正偷偷的喜歡你喔'); 
         var select3 = 'SELECT * FROM MyGuests WHERE love = "'+love1+'"';
@@ -88,11 +85,10 @@ connection.connect(function(error){
           if(love2 == req.body.name1 && love1ma1 == love2ma2 && love1age1 == love2age2 && love1ma2 == love2ma1 && love1age2 == love2age1)
           {
           console.log(rows[0].love);
-          res.send(''+rows[0].love+'和'+love1+'相愛一波');
+          res.send(''+rows[0].love+'和'+love2+'是相愛的喔~');
           }
           else
           {
-            console.log("223213231");
             res.send("沒有人和你相愛!!");
           }
           }
@@ -136,11 +132,7 @@ connection.connect(function(error){
 
   }
 });
-
 });
 
-
 module.exports = router;
-
-
 
