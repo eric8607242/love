@@ -31,6 +31,7 @@ var post = {
 
 var insert1 = 'insert into MyGusets set ?';
 var insert = 'INSERT INTO MyGuests SET ?';
+var inhis = 'INSERT INTO his SET ?';
 var insertSQL = 'insert into MyGuests(firstname) values(+req.body.name+)';
 var select1 = 'SELECT * FROM MyGuests WHERE fbID = "'+req.body.fbID+'"';
 var update = 'UPDATE MyGuests SET beloved="'+req.body.name1+'",ma1="'+req.body.ma1+'",age1="'+req.body.age1+'" WHERE fbID = "'+req.body.fbID+'"';
@@ -54,6 +55,7 @@ connection.connect(function(error){
         if(rows == null || rows == '')
         {
           connection.query(insert,post,function(err){
+            connection.query(inhis,post,function(err){
             if(err)
             {console.log('nonono');}
             else
@@ -61,11 +63,14 @@ connection.connect(function(error){
             console.log('insert success');
             res.send("已經收到你的資訊囉~等等月老的幫忙吧")
             }
+            });
           });
         }
         else
         {
           connection.query(update,function(err){
+            connection.query(inhis,post,function(err){
+            
             if(err)
             {console.log('nonono');}
             else
@@ -73,6 +78,8 @@ connection.connect(function(error){
               console.log('insert success1');
               res.send("已經收到你的資訊囉~等等月老的幫忙吧");
             }
+            
+            });
           });  
         }
         });
